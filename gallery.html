@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+    <style>body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #f0f0f0;
+    }
+    
+    .frame {
+        display: flex;
+        gap: 20px;
+        border: 5px solid #ccc;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        transition: transform 0.2s;
+        margin-bottom: 20px;
+    }
+    
+    .frame img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        flex: 1 1 auto;
+    }
+    
+    .frame:hover {
+        transform: scale(1.05);
+    }
+    .section__subheader {
+        margin-bottom: 0.5rem;
+        position: relative;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: var(--text-dark);
+      }
+      .section__header {
+        max-width: 600px;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+        font-weight: 600;
+        line-height: 3rem;
+        color: var(--text-dark);
+      }
+      .button-container {
+        margin-top: 20px;
+    }
+    
+    .home-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #ff69b4; /* Pink color */
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .home-button:hover {
+        background-color: #ff1493; /* Darker pink color for hover effect */
+    }
+    
+    </style>
+</head>
+<body>
+   
+    <p class="section__subheader">Kingsukh Guest House Gallery</p>
+    <h2 class="section__header">Discover Our Elegance: A Visual Journey Through Our Luxurious Guest House</h2>
+
+    <div class="frame">
+        <img src="assets/palash.webp" alt="Description " height="100" width="400">
+        <img src="assets/mithonDam.webp" alt="Description" height="100" width="400"> 
+    </div>
+    <div class="frame">
+        <img src="assets/ayodhya.webp" alt="Description" height="100" width="400">
+        <img src="assets/baranti.webp" alt="Description" height="100" width="400">
+    </div>
+    <div class="frame">
+        <img src="assets/1.jpg" alt="Description " height="80" width="400">
+        <img src="assets/about.jpg" alt="Description " height="80" width="400">
+    </div>
+    <div class="frame">
+        <img src="assets/recep.jpg" alt="Description " height="40" width="350">
+        <img src="assets/out.jpg" alt="Description" height="40" width="350">
+    </div>
+    <div class="frame">
+        <img src="assets/flower.jpg" alt="Description " height="50" width="350">
+        <img src="assets/header.jpg" alt="Description" height="50" width="350">
+    </div>
+
+    
+    <div class="button-container">
+        <a href="index.html" class="home-button">Back to Home</a>
+    </div>
+</body>
+</html>

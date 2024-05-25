@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    
+    <title>Web Development</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+            <img src ="assets/logo.png" height="100" width="200">
+          </div>
+          <div class="nav__menu__btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+          </div>
+        </div>
+        <ul class="nav__links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#service">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="review.html">Reviews</a></li>
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="btn nav__btn"><a href="book.html" style="color: white;">Book Now</a></button>
+      </nav>
+      <div class="section__container header__container" id="home">
+        <p>Simple - Unique - Friendly</p>
+        <h1>Make Yourself At Home<br />In Our <span>Guest House</span>.</h1>
+      </div>
+    </header>
+
+    <section class="section__container booking__container">
+      <form action="/" class="booking__form" id="booking-form">
+        <h1>CHECK AVAILABILITY</h1>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-in">CHECK-IN</label>
+            <input type="date" id="check-in" name="check-in" placeholder="Check In" required />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-calendar-2-fill"></i></span>
+          <div>
+            <label for="check-out">CHECK-OUT</label>
+            <input type="date" id="check-out" name="check-out" placeholder="Check Out" required />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-user-fill"></i></span>
+          <div>
+            <label for="guest">GUEST</label>
+            <input type="number" id="guest" name="guest" min="1" placeholder="Guest" required />
+          </div>
+        </div>
+        <div class="input__group">
+          <span><i class="ri-hotel-fill"></i></span>
+          <div>
+            <label for="room">ROOM TYPE</label>
+            <select id="room" name="room" required>
+              <option value="" disabled selected>Select Room Type</option>
+              <option value="Executive Cityscape Room">Executive Cityscape Room</option>
+              <option value="Heavenly Bliss Room">Heavenly Bliss Room</option>
+              <option value="Family Garden Retreat">Family Garden Retreat</option>
+            </select>
+          </div> 
+        </div>
+        <div class="input__group input__btn">
+          <button class="btn" type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </section>
+    <script>
+      document.getElementById('booking-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+    
+        // Collect form data
+        const checkIn = document.getElementById('check-in').value;
+        const checkOut = document.getElementById('check-out').value;
+        const guest = document.getElementById('guest').value;
+        const room = document.getElementById('room').value;
+    
+        // Construct the message for WhatsApp
+        const message = `Booking Details:\nCheck-In: ${checkIn}\nCheck-Out: ${checkOut}\nGuest: ${guest}\nRoom Type: ${room}`;
+    
+        // Display a simple alert on form submission
+        alert('Booking submitted successfully! Redirecting to WhatsApp Web...');
+    
+        // Redirect to WhatsApp Web with pre-filled message to a specific number
+        const phoneNumber = '9007062180';
+        const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+        window.location.href = whatsappWebUrl;
+      });
+    </script>
+    
+    
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="assets/service.jpg" alt="about" />
+      </div>
+      <div class="about__content">
+        <p class="section__subheader">ABOUT US</p>
+        <h2 class="section__header">The Best Holidays Start Here!</h2>
+        <p class="section__description">
+            Embark on a tranquil journey at our Kingsukh Guest House, enveloped by the scenic allure of Biharinath Hill, Baranti Hill, Susunia Hill, Joychandi Hill, Garhpanchkot, Baranti Dam, Maithon Dam, and the captivating Panchat Dam. Revel in the embrace of comfort, relish delightful meals, and unwind in our verdant garden oasis. Your ideal retreat beckons, promising a harmonious blend of nature's beauty and heartfelt hospitality. Explore the hidden gems of Purulia, creating memories that linger long after your stay.
+        </p>
+        <div class="about__btn">
+          <button class="btn"><a href="location.html" style="color: white;">Our Location</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container room__container" id="rooms">
+      <p class="section__subheader">OUR LIVING ROOM</p>
+      <h2 class="section__header">The Most Memorable Rest Time Starts Here.</h2>
+      <div class="room__grid">
+        <div class="room__card">
+            <div class="room__card__image">
+              <img src="assets/room1.jpg" alt="room" />
+              <div class="room__card__icons">
+                <span><i class="ri-heart-fill"></i></span>
+                <span><i class="ri-paint-fill"></i></span>
+                <span><i class="ri-shield-star-line"></i></span>
+              </div>
+            </div>
+            <div class="room__card__details">
+              <h4>Executive Cityscape Room</h4>
+              <p>
+                Experience urban elegance and modern comfort in the heart of the
+                city.
+              </p>
+              <h5>Starting from <span>Rs. 1500/night</span></h5>
+              <button class="btn"><a href="book.html " style= "color:white">Book Now</a></button>
+            </div>
+          </div>
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/small.jpg" alt="room" />
+            <div class="room__card__icons">
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-paint-fill"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>
+            </div>
+          </div>
+          <div class="room__card__details">
+            <h4>Heavenly Bliss Room</h4>
+            <p>
+                Experience the perfect blend of comfort and convenience in our cozy guest house room, your ideal retreat nestled in the vibrant heart of the city!
+            </p>
+            <h5>Starting from <span>Rs. 1000/night</span></h5>
+            <button class="btn"><a href="book.html " style= "color:white">Book Now</a></button>
+          </div>
+        </div>
+        
+        <div class="room__card">
+          <div class="room__card__image">
+            <img src="assets/large.jpg" alt="room" />
+            <div class="room__card__icons">
+              <span><i class="ri-heart-fill"></i></span>
+              <span><i class="ri-paint-fill"></i></span>
+              <span><i class="ri-shield-star-line"></i></span>
+            </div>
+          </div>
+          <div class="room__card__details">
+            <h4>Family Garden Retreat</h4>
+            <p>
+              Spacious and inviting, perfect for creating cherished memories
+              with loved ones.
+            </p>
+            <h5>Starting from <span>Rs. 1800/night</span></h5>
+            <button class="btn"><a href="book.html " style= "color:white">Book Now</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="section__container service__container">
+        <div class="service__content">
+          <p class="section__subheader">SERVICES</p>
+          <h2 class="section__header">Strive Only For The Best.</h2>
+          <ul class="service__list">
+            <li>
+              <span><i class="ri-shield-star-line"></i></span>
+              High Class Security
+            </li>
+            <li>
+              <span><i class="ri-24-hours-line"></i></span>
+              24 Hours Room Service
+            </li>
+            <li>
+              <span><i class="ri-restaurant-line"></i></span>
+              Resturaunt
+            </li>
+            <li>
+              <span><i class="ri-map-2-line"></i></span>
+              Tourist Guide Support
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container banner__container">
+      <div class="banner__content">
+        
+        <div class="banner__card">
+          <h4>100+</h4>
+          <p>Bookings Completed</p>
+        </div>
+        <div class="banner__card">
+          <h4>150+</h4>
+          <p>Happy Customers</p>
+        </div>
+      </div>
+    </section>
+    
+    <center><div class="reviews-box">
+        <h2><a href="review.html" style= color:white>Reviews</a></h2>
+        
+      </div></center>
+    <br><br>
+
+    <section class="explore" id="explore">
+      <p class="section__subheader">EXPLORE</p>
+      <h2 class="section__header">What's New Today.</h2>
+      <div class="explore__bg">
+        <div class="explore__content">
+          <input type="date" class="section__description" id="menu-date" value="2024-05-25">
+          <h4>A New Menu Is Available In Our Hotel.</h4>
+          <p class="section__description"><button class="btn"><a href="food-menu.html" style="color : black">Continue</a></button></p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="logo">
+            <a href="#home"><font color="white"><h4><pre>KINGSUKH GUEST HOUSE</pre></h4></font></a>
+          </div>
+          <p class="section__description">
+            Discover a world of comfort, luxury, and adventure as you explore
+            our curated selection of hotels, making every moment of your getaway
+            truly extraordinary.
+          </p>
+          <button class="btn"><a href="book.html " style= "color:white">Book Now</a></button>
+          
+        </div>
+        <div class="footer__col">
+          <h4>QUICK LINKS</h4>
+          <ul class="footer__links">
+            <li><a href="#">Browse Destinations</a></li>
+            <li><a href="#">Special Offers & Packages</a></li>
+            <li><a href="#">Room Types & Amenities</a></li>
+            <li><a href="#">Customer Reviews & Ratings</a></li>
+            <li><a href="#">Travel Tips & Guides</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>OUR SERVICES</h4>
+          <ul class="footer__links">
+            <li><a href="#">Concierge Assistance</a></li>
+            <li><a href="#">Flexible Booking Options</a></li>
+            <li><a href="#">Airport Transfers</a></li>
+            <li><a href="#">Wellness & Recreation</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>CONTACT US</h4>
+          <ul class="footer__links">
+            <li><a href="#">Address: Beside Barshal Water Tank, Manpur, Barhanti, West Bengal 723156</a></li>
+            <li><a href="#">kkghosh0099@gmail.com</a></li>
+            <li><a href="#">+91 9007062180</a></li>
+          </ul>
+          <div class="footer__socials">
+            <a href="#"><img src="assets/facebook.png" alt="facebook" /></a>
+            <a href="#"><img src="assets/instagram.png" alt="instagram" /></a>
+            <a href="#"><img src="assets/youtube.png" alt="youtube" /></a>
+            <a href="#"><img src="assets/twitter.png" alt="twitter" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Kingsukh Guest House. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

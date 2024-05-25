@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            background-image: url("assets/flower.jpg");
+            background-size: cover;
+        }
+        .container {
+            background-color: white;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #b13d84;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin: 10px 0 5px;
+        }
+        input, select, button {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff69b4; /* Pink background */
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #ff1493; /* Darker pink on hover */
+        }
+        .terms-container {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #ffe6f2; /* Light pink background */
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        .terms-container h3 {
+            margin-top: 0;
+        }
+        .section__header {
+            max-width: 600px;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 3rem;
+            color: var(--text-dark);
+        }
+        .home-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .home-button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h2 class="section__header" style="color: #ff1493;">Kingsukh Guest House Booking</h2>
+    </center>
+
+    <div class="container">
+        <form id="booking-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+    
+            <label for="check-in">Check-in Date:</label>
+            <input type="date" id="check-in" name="check-in" required>
+    
+            <label for="check-out">Check-out Date:</label>
+            <input type="date" id="check-out" name="check-out" required>
+    
+            <label for="guests">Number of Guests:</label>
+            <input type="number" id="guests" name="guests" min="1" required>
+    
+            <label for="rooms">Number of Rooms:</label>
+            <input type="number" id="rooms" name="rooms" min="1" required>
+    
+            <label for="room-type">Room Type:</label>
+            <select id="room-type" name="room-type" required>
+                <option value="" disabled selected>Select Room Type</option>
+                <option value="Executive Cityscape Room">Executive Cityscape Room</option>
+                <option value="Heavenly Bliss Room">Heavenly Bliss Room</option>
+                <option value="Family Garden Retreat">Family Garden Retreat</option>
+            </select>
+
+            <label for="payment-mode">Payment Mode:</label>
+    <select id="payment-mode" name="payment-mode" required>
+      <option value="" disabled selected>Select Payment Mode</option>
+      <option value="Credit Card">Credit Card</option>
+      <option value="Debit Card">Debit Card</option>
+      <option value="PayPal">PayPal</option>
+      <option value="Bank Transfer">Bank Transfer</option>
+      <option value="Offline Payment">Offline Payment</option>
+    </select>
+    
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Collect form data
+            const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const checkIn = document.getElementById('check-in').value;
+        const checkOut = document.getElementById('check-out').value;
+        const guests = document.getElementById('guests').value;
+        const rooms = document.getElementById('rooms').value;
+        const roomType = document.getElementById('room-type').value;
+        const paymentMode = document.getElementById('payment-mode').value;
+
+        
+        const message = `Booking Details:\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nCheck-In: ${checkIn}\nCheck-Out: ${checkOut}\nNumber of Guests: ${guests}\nNumber of Rooms: ${rooms}\nRoom Type: ${roomType}\nPayment Mode: ${paymentMode}`;
+
+    
+           
+            alert('Booking submitted successfully! Redirecting to WhatsApp Web...');
+    
+            
+            const phoneNumber = '9007062180';
+            const whatsappWebUrl = `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+            window.location.href = whatsappWebUrl;
+        });
+    </script>
+    
+        <div class="terms-container">
+            <h3>Terms and Policies</h3>
+            <p><strong>Cancellation Policy:</strong> Cancellations made within 48 hours of the check-in date will incur a cancellation fee of one night's stay. No-shows will be charged the full amount of the reservation.</p>
+            <p><strong>Payment Policy:</strong> A deposit of 50% of the total booking amount is required at the time of booking. The remaining balance will be charged upon check-in. We accept all major credit cards.</p>
+            <p><strong>Check-in/Check-out:</strong> Check-in time is 3:00 PM and check-out time is 11:00 AM. Early check-in and late check-out are subject to availability and may incur additional charges.</p>
+            <p><strong>Privacy Policy:</strong> We are committed to protecting your privacy. Your personal information will be used solely for the purpose of processing your booking and will not be shared with third parties.</p>
+            <p><strong>Additional Policies:</strong> No pets are allowed in the guest house. Smoking is prohibited in all rooms and public areas. Guests are responsible for any damage caused to hotel property during their stay.</p>
+        </div>
+    </div>
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            alert('Booking submitted successfully! Redirecting to WhatsApp...');
+
+            // Redirect to WhatsApp
+            window.location.href = "https://web.whatsapp.com/";
+        });
+    </script>
+    <center>
+        <div class="button-container">
+            <a href="index.html" class="home-button">Back to Home</a>
+        </div>
+    </center>
+</body>
+</html>
+<a href="#"><H1><font color ="white">Kingsukh Guest House</font></H1></a>
