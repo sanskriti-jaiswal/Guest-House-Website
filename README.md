@@ -11,4 +11,5 @@ The requirements have been kept in mind:
 - Enhanced user experience with smooth animations, transitions, and interactive elements.
   
 Thanks for reading,
-Sanskriti Jaiswal
+# Sanskriti Jaiswal
+
