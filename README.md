@@ -1,6 +1,6 @@
 # Introduction
 Welcome to my Guest House Website! This project is a complete redesign aimed at enhancing the visual appeal, functionality, and user experience of the guest house’s online presence. The website effectively showcases the services offered and helps attract potential customers.
-For reference, you can check out the old website here: Kingsukh Guest House (Old Version). This redesign significantly improves upon it by implementing modern UI/UX principles, responsiveness, and interactivity.
+For reference, you can check out the old website here: Kingsukh Guest House(Old Version): https://www.kingsukhguesthouse.com/  .This redesign significantly improves upon it by implementing modern UI/UX principles, responsiveness, and interactivity.
 
 ➡️ I would love for you to check out my new design! Feel free to explore the improvements and share your thoughts. 😊
 
