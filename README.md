@@ -28,8 +28,10 @@ JavaScript – For interactivity and enhancing user experience.
 # How to Run the Project
 Clone the repository:
 git clone https://github.com/your-repo/kingsukh-guest-house.git
+
 Navigate to the project folder:
 cd kingsukh-guest-house
+
 Open index.html in your browser
 Double-click index.html to open in a browser.
 Or use a local development server for better performance.
