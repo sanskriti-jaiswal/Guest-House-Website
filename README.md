@@ -28,6 +28,10 @@ JavaScript – For interactivity and enhancing user experience.
 ✔️ Added smooth animations and transitions to make interactions engaging.
 ✔️ Optimized code for better performance and compatibility.
 
+# Watch Live
+
+https://github.com/user-attachments/assets/02eddece-c69d-4880-a3ac-4e1a06b4a6ed
+
 # How to Run the Project
 Clone the repository:
 git clone https://github.com/sanskriti-jaiswal/Guest-House-Website.git
